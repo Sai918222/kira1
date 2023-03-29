@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+int main(){
+    float a,b,x,y,z;
+    char*n;
+    cout<<"Enter the name of the user: ";
+    cin>>n;
+    cout<<"Enter the number of units consumed: ";
+    cin>>a;
+    for(x=0;a<100;x++){
+        x=1.20*a;
+    }
+    if(a>=100&&a<=200){
+        x=(1.20*100)+(a-100)*2.2;
+    }
+    if(a>200&&a<=300){
+        x=(1.2*100)+(2.2*100)+(a-200)*3.5;
+    }
+    if(a>300&&a<=500){
+        x=(1.2*100)+(2.2*100)+(3.5*100)+(a-300)*4.5;
+    }
+    if(a>500){
+        x=(1.2*100)+(2.2*100)+(3.5*100)+(4.5*100)+(a-500)*7;
+    }
+    cout<<"The name of the user is: "<<n;
+    cout<<"\nNumber of units consumed is : "<<a;
+    cout<<"\nThe amount charged will be: "<<x;
+    return 0;
+}
